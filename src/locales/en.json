@@ -1,0 +1,144 @@
+{
+  "appBar": {
+    "address": {
+      "placeholder": "Address",
+      "refresh": "Refresh",
+      "home": "Home",
+      "back": "Back",
+      "forward": "Forward",
+      "bookmarks": "Add to bookmarks",
+      "tip": {
+        "title": "Address format:",
+        "format": "[server/]address",
+        "main": "Main network:",
+        "test": "Test network:",
+        "local": "Local node:"
+      }
+    },
+    "tabs": {
+      "home": "Home",
+      "untitled": "Untitled",
+      "new": "Open new tab"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "close": "Close"
+    },
+    "language": {
+      "title": "Language",
+      "items": {
+        "en": "English",
+        "ru": "Русский",
+        "kr": "",
+        "cn": ""
+      }
+    }
+  },
+  "keysManagement": {
+    "title": "Keys Management",
+    "name": "Name",
+    "publicKey": "Public Key",
+    "remove": "Remove",
+    "add": "Add",
+    "close": "Close"
+  },
+  "copy": {
+    "copy": "Copy",
+    "copied": "Copied",
+    "error": "Error"
+  },
+  "addKey": {
+    "title": "Add Key",
+    "name": "Name",
+    "seedPhrase": "Seed Phrase",
+    "or": "or",
+    "password": "Create Password",
+    "encodeTip": "Your secret key will be encoded with chacha20 algorithm with following password and locally stored in your browser.",
+    "back": "Back",
+    "add": "Add",
+    "seedSize": "Should be 12 or 24 words.",
+    "unknownError": "Unknown error."
+  },
+  "rightCornerMenu": {
+    "menu": "Menu",
+    "settings": "Settings",
+    "keys": "Keys Management",
+    "source": "Source Code"
+  },
+  "debotInfo": {
+    "name": "Name",
+    "author": "Author",
+    "language": "Language",
+    "publisher": "Publisher",
+    "support": "Support",
+    "version": "Version",
+    "launch": "Launch"
+  },
+  "approveDialog": {
+    "title": "Approve activity",
+    "type": "Type:",
+    "dst": "Destination:",
+    "fee": "Fee:",
+    "outs": "Outs:",
+    "amount": "Amount",
+    "dst1": "Destination",
+    "unknown": "Unknown activity type!",
+    "reject": "Reject",
+    "approve": "Approve"
+  },
+  "validation": {
+    "required": "Required.",
+    "address": "Incorrect address format.",
+    "gte": "Must be greater or equal to {0}.",
+    "lte": "Must be less or equal to {0}.",
+    "scale": "Reduce the number of decimal places.",
+    "isInt": "Should be integer."
+  },
+  "tag": {
+    "unknown": "Unknown Element",
+    "inputAmount": {
+      "amount": "Amount",
+      "apply": "Apply"
+    },
+    "inputNumber": {
+      "number": "Number",
+      "apply": "apply"
+    },
+    "input": {
+      "value": "Value",
+      "apply": "apply"
+    },
+    "fatal": {
+      "error": "Error",
+      "refresh": "Restart",
+      "console": "See details in console."
+    },
+    "inputAddress": {
+      "address": "Address",
+      "apply": "Apply"
+    },
+    "inputConfirm": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "selectKey": {
+      "title": "The deBot requires a key",
+      "key": "Key",
+      "pass": "Password",
+      "myKeys": "My Keys",
+      "select": "Select",
+      "unknownError": "Unknown error."
+    }
+  },
+  "keystore": {
+    "invalidFile": "Invalid keystore file.",
+    "corrupted": "Cannot decrypt keystore file. Probably it's corrupted.",
+    "invalidPassword": "Invalid password.",
+    "unknownVersion": "Unknown keystore version."
+  }
+}
