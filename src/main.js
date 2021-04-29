@@ -11,7 +11,7 @@ import {libWeb, libWebSetup} from "@tonclient/lib-web";
 import snack from './plugins/snack';
 
 libWebSetup({
-  binaryURL: "/tonclient_1.12.0.wasm",
+  binaryURL: "/tonclient_1.13.0.wasm",
 });
 TonClient.useBinaryLibrary(libWeb);
 
