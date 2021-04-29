@@ -1,0 +1,157 @@
+{
+  "appBar": {
+    "address": {
+      "placeholder": "地址",
+      "refresh": "刷新",
+      "home": "首页",
+      "back": "后退",
+      "forward": "转发",
+      "bookmarks": "添加到书签",
+      "tip": {
+        "title": "地址格式：",
+        "format": "服务器/]地址",
+        "main": "主网络：",
+        "test": "测试网络：",
+        "local": "本地节点："
+      }
+    },
+    "tabs": {
+      "home": "首页",
+      "untitled": "无标题",
+      "new": "打开新标签"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "theme": {
+      "title": "主题",
+      "light": "光",
+      "dark": "黑暗的",
+      "close": "密切"
+    },
+    "language": {
+      "title": "语",
+      "items": {
+        "en": "English",
+        "ru": "Русский",
+        "kr": "한국어",
+        "cn": "中文"
+      }
+    }
+  },
+  "keysManagement": {
+    "title": "密钥管理",
+    "name": "名称",
+    "publicKey": "公钥",
+    "remove": "删除",
+    "add": "新增",
+    "close": "密切"
+  },
+  "copy": {
+    "copy": "复制",
+    "copied": "已经复制",
+    "error": "错误"
+  },
+  "addKey": {
+    "title": "添加密钥",
+    "name": "名称",
+    "seedPhrase": "秘密短语",
+    "or": "或",
+    "password": "创建密码",
+    "encodeTip": "您的密钥将用以下密码以“chacha20”算法编码并且存储在您的本地浏览器当中。",
+    "back": "后退",
+    "add": "新增",
+    "seedSize": "应该是12或24个字。",
+    "unknownError": "未知错误"
+  },
+  "rightCornerMenu": {
+    "menu": "菜单",
+    "settings": "设置",
+    "keys": "密钥管理",
+    "source": "源代码"
+  },
+  "debotInfo": {
+    "name": "名称",
+    "author": "Author",
+    "language": "语",
+    "publisher": "发行人",
+    "support": "支持",
+    "version": "Version",
+    "launch": "跑步",
+    "untitled": "无标题",
+    "unknown": "未知"
+  },
+  "approveDialog": {
+    "title": "行动确认",
+    "type": "型",
+    "dst": "接受者：",
+    "fee": "费用",
+    "outs": "出局数：",
+    "amount": "额",
+    "dst1": "接受者",
+    "unknown": "未知的活动类型！",
+    "reject": "禁止",
+    "approve": "批准"
+  },
+  "validation": {
+    "required": "所需的",
+    "address": "不正确的地址格式。",
+    "gte": "必须大于或等于{0}。",
+    "lte": "必须小于或等于{0}。",
+    "scale": "减少小数位数。",
+    "isInt": "应为整数。"
+  },
+  "tag": {
+    "unknown": "未知元素",
+    "inputAmount": {
+      "amount": "额",
+      "apply": "应用"
+    },
+    "inputNumber": {
+      "number": "编号",
+      "apply": "应用"
+    },
+    "input": {
+      "value": "价值",
+      "apply": "应用"
+    },
+    "fatal": {
+      "error": "错误",
+      "refresh": "重新开始",
+      "console": "详见控制台。"
+    },
+    "inputAddress": {
+      "address": "地址",
+      "apply": "应用"
+    },
+    "inputConfirm": {
+      "cancel": "取消",
+      "confirm": "确认"
+    },
+    "selectKey": {
+      "title": "该deBot需要密钥",
+      "key": "钥匙",
+      "pass": "密码",
+      "myKeys": "我的钥匙",
+      "select": "选择",
+      "unknownError": "未知错误"
+    },
+    "scanQrCode": {
+      "title": "QR码",
+      "drop": "将图像拖到这个区域",
+      "or":  "或",
+      "upload":  "上载",
+      "scan":  "扫描QR码",
+      "couldNotRecognize":  "无法识别",
+      "error":  "错误",
+      "allowCamera":"允许使用设备上的摄像头",
+      "cancel": "取消"
+    }
+  },
+  "keystore": {
+    "invalidFile": "无效的密钥库文件。",
+    "corrupted": "无法解密钥库文件。可能是它损坏了",
+    "invalidPassword": "无效的密码。",
+    "unknownVersion": "密钥库版本不明"
+  }
+}

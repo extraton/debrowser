@@ -1,8 +1,9 @@
 import Dexie from "dexie";
 
-const DB_NAME = 'db7';
+const DB_NAME = 'db9';
 
 const _ = {
+  client: null,
   setSchema: function (db) {
     db.version(1).stores({
       param: '&key, value',
@@ -22,11 +23,11 @@ const _ = {
           name: 'Test (password: 123)',
           keys: {
             "version": 1,
-            "public": "c895f9be7b3fa192e8d4a69954cf23d05b6f5c2155fbd1ac5e08a8220259210c",
+            "public": "426868ad6776b9614593682302bcfabf2b2e8edd8ca29850477e9e3f478f3efd",
             "Crypto": {
               "cipher": "chacha20",
-              "cipherparams": {"nonce": "ce4ffe1bbb0f9f57e95581ee"},
-              "ciphertext": "/SJjgJJde0giMX+bFRn3OoOXSuQ7LHI1l3+Pss8NsOet6LYVhCeuMMiHN9sluK9S1+j4UwU8QpbYU1oVqV/rpQ=="
+              "cipherparams": {"nonce": "968e18427b506a92563c24a2"},
+              "ciphertext": "q3tk7AUEOD1D0wMDnUdA7w1GbB2FuGwzMjWoVkBZsCh2+e77m1ZXECeKMZXghg8ZcGxu9se9+lkUDrHnF6oA2g=="
             }
           },
         },
@@ -37,13 +38,16 @@ const _ = {
 
 export default {
   getClient: async function () {
-    const isInited = await Dexie.exists(DB_NAME);
-    const db = new Dexie(DB_NAME);
-    _.setSchema(db);
-    await db.open();
-    if (!isInited) {
-      await _.fillInitial(db);
+    if (null === _.client) {
+      const isInited = await Dexie.exists(DB_NAME);
+      const db = new Dexie(DB_NAME);
+      _.setSchema(db);
+      await db.open();
+      if (!isInited) {
+        await _.fillInitial(db);
+      }
+      _.client = db;
     }
-    return db;
+    return _.client;
   },
 };

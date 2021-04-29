@@ -42,12 +42,12 @@ export default {
       return !!value || this.$t('validation.required')
     },
     address(value) {
-      return /^-?[0-9]+:[a-f0-9]{64}$/i.test(value) || this.$t('validation.required')
+      return /^-?[0-9]+:[a-f0-9]{64}$/i.test(value) || this.$t('validation.address')
     },
     async apply() {
       await this.$refs.form.validate();
       if (this.valid) {
-
+        this.element.tab.execute(this.element.inputMsg, this.element.answerId, this.element.tab.epoch, {value: this.value});
         this.element.setUsed();
       }
     },

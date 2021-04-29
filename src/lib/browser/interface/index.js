@@ -4,10 +4,11 @@ import menuInterface from "@/lib/browser/interface/menu";
 import confirmInput from "@/lib/browser/interface/confirmInput";
 import addressInput from "@/lib/browser/interface/addressInput";
 import numberInput from "@/lib/browser/interface/numberInput";
+import qrCode from "@/lib/browser/interface/qrCode";
 import CallInterfaceException from "@/lib/browser/exception/CallInterfaceException";
 import FunctionNotImplementedException from "@/lib/browser/exception/FunctionNotImplementedException";
 
-const interfaces = [terminalInterface, menuInterface, amountInput, confirmInput, addressInput, numberInput];
+const interfaces = [terminalInterface, menuInterface, amountInput, confirmInput, addressInput, numberInput, qrCode];
 
 export default {
   async call(Tab, id, msg) {

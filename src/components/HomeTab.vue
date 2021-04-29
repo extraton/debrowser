@@ -1,43 +1,10 @@
 <template>
   <div class="homeTab">
-<!--    <div class="homeTab__item">-->
-<!--      <v-btn class="mx-2" color="#ed732d" @click="setAddress({account: '0:ffeef12aafc3a2cf7db6f3fba1a5b381d2ff10efbc755a91e9b98333d490af6d', server: 'http://127.0.0.1'})"-->
-<!--             x-large dark fab>-->
-<!--        <v-icon x-large dark>-->
-<!--          mdi-wallet-->
-<!--        </v-icon>-->
-<!--      </v-btn>-->
-<!--      <div class="homeTab__item__title text-center subtitle-2">Multisig</div>-->
-<!--    </div>-->
-    <div class="homeTab__item">
-      <v-btn class="mx-2" color="#ed732d"
-             @click="setAddress({account: '0:81c12c2f4514124536aafea59db7df0262d3af877b4477afe6514bbc5bc9f317', server: 'net.ton.dev'})"
-             x-large dark fab>
-        <v-icon x-large dark>
-          $vuetify.icons.coins
-        </v-icon>
+    <div v-for="(bot, i) in bots" :key="i" class="homeTab__item">
+      <v-btn class="mx-2" :color="bot.color" @click="setAddress(bot.address)" x-large dark fab>
+        <v-icon x-large dark>{{ bot.icon }}</v-icon>
       </v-btn>
-      <div class="homeTab__item__title text-center subtitle-2">TIP-3 Manager</div>
-    </div>
-<!--    <div class="homeTab__item">-->
-<!--      <v-btn class="mx-2" color="#ff7163"-->
-<!--             @click="setAddress({account: '0:a2c12d654183e5746bd15c13de82b0cf4f567ada705a828aa2d91199152fcd88', server: 'http://127.0.0.1'})"-->
-<!--             x-large dark fab>-->
-<!--        <v-icon x-large dark>-->
-<!--          mdi-draw-->
-<!--        </v-icon>-->
-<!--      </v-btn>-->
-<!--      <div class="homeTab__item__title text-center subtitle-2">DoD</div>-->
-<!--    </div>-->
-    <div class="homeTab__item">
-      <v-btn class="mx-2" color="#5dcc89"
-             @click="setAddress({account: '0:2a92e3d01c530697a0ec3ab5c3494474faa7ea0af5fa30d4ed508115bc9957a7', server: 'net.ton.dev'})"
-             x-large dark fab>
-        <v-icon x-large dark>
-          mdi-wizard-hat
-        </v-icon>
-      </v-btn>
-      <div class="homeTab__item__title text-center subtitle-2">Demiurge SMV</div>
+      <div class="homeTab__item__title text-center subtitle-2">{{ bot.name }}</div>
     </div>
   </div>
 </template>
@@ -48,7 +15,28 @@ import {mapActions} from "vuex";
 export default {
   components: {},
   props: {},
-  data: () => ({}),
+  data: () => ({
+    bots: [
+      {
+        name: 'Interfaces Demo',
+        address: {account: '0:9452c0f389d6892b4f10d6979f5517c5bee7bf4b0e4b764e7a468bd96abff64a', server: 'net.ton.dev'},
+        color: '#ff7163',
+        icon: 'mdi-eye',
+      },
+      {
+        name: 'TIP-3 Manager',
+        address: {account: '0:81c12c2f4514124536aafea59db7df0262d3af877b4477afe6514bbc5bc9f317', server: 'net.ton.dev'},
+        color: '#ed732d',
+        icon: '$vuetify.icons.coins',
+      },
+      {
+        name: 'Demiurge SMV',
+        address: {account: '0:2a92e3d01c530697a0ec3ab5c3494474faa7ea0af5fa30d4ed508115bc9957a7', server: 'net.ton.dev'},
+        color: '#5dcc89',
+        icon: 'mdi-wizard-hat',
+      },
+    ],
+  }),
   computed: {},
   async mounted() {
   },

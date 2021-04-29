@@ -12,7 +12,6 @@ export default {
   },
   actions: {
     init: ({commit}, {activity, resolve}) => {
-      console.log({activity});
       commit('setActivity', activity);
       commit('setResolve', resolve);
       commit('changeOpen', true);

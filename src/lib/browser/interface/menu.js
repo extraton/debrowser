@@ -10,6 +10,7 @@ const funcs = {
       choices.push({
         handlerId: item.handlerId,
         title: Enc.hexToStr(item.title),
+        description: Enc.hexToStr(item.description),
       });
     }
     return new MenuElement(title, choices);

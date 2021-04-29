@@ -11,7 +11,11 @@ export default {
   data: () => ({}),
   computed: {},
   async mounted() {
-    this.$refs.loading.scrollIntoView({behavior: 'smooth'});
+    setTimeout(function(){
+      if (typeof this.$refs.loading !== 'undefined') {
+        this.$refs.loading.scrollIntoView({behavior: 'smooth'});
+      }
+    }.bind(this), 300);
   },
   methods: {}
 }

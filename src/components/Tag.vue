@@ -9,6 +9,7 @@
     <t-input-address v-else-if="element instanceof list.InputAddressElement" :element="element"/>
     <t-input-number v-else-if="element instanceof list.InputNumberElement" :element="element"/>
     <t-select-key v-else-if="element instanceof list.SelectKeyElement" :element="element"/>
+    <t-scan-qr-code v-else-if="element instanceof list.ScanQrCodeElement" :element="element"/>
     <div v-else v-text="$t('tag.unknown')"/>
   </div>
 </template>
@@ -23,6 +24,7 @@ import tFatal from "@/components/tag/Fatal";
 import tInputAddress from "@/components/tag/InputAddress";
 import tInputNumber from "@/components/tag/InputNumber";
 import tSelectKey from "@/components/tag/SelectKey";
+import tScanQrCode from "@/components/tag/ScanQrCode";
 import TextElement from "@/lib/browser/element/TextElement";
 import MenuElement from "@/lib/browser/element/MenuElement";
 import InputElement from "@/lib/browser/element/InputElement";
@@ -32,9 +34,21 @@ import FatalElement from "@/lib/browser/element/FatalElement";
 import InputAddressElement from "@/lib/browser/element/InputAddressElement";
 import InputNumberElement from "@/lib/browser/element/InputNumberElement";
 import SelectKeyElement from "@/lib/browser/element/SelectKeyElement";
+import ScanQrCodeElement from "@/lib/browser/element/ScanQrCodeElement";
 
 export default {
-  components: {tText, tMenu, tInput, tInputAmount, tInputConfirm, tFatal, tInputAddress, tInputNumber, tSelectKey},
+  components: {
+    tText,
+    tMenu,
+    tInput,
+    tInputAmount,
+    tInputConfirm,
+    tFatal,
+    tInputAddress,
+    tInputNumber,
+    tSelectKey,
+    tScanQrCode
+  },
   props: {element: Object},
   data: () => ({
     list: {
@@ -46,12 +60,15 @@ export default {
       FatalElement,
       InputAddressElement,
       InputNumberElement,
-      SelectKeyElement
+      SelectKeyElement,
+      ScanQrCodeElement
     },
   }),
   computed: {},
   async mounted() {
-    this.$refs.tab.scrollIntoView({behavior: 'smooth'});
+    setTimeout(function(){
+      this.$refs.tab.scrollIntoView({behavior: 'smooth'});
+    }.bind(this), 300);
   },
   methods: {}
 }

@@ -1,6 +1,6 @@
 <template>
-  <v-card>
-    <v-card-text class="tText body-1">
+  <v-card :class="['tText', {'tText--empty': '' === element.text}]">
+    <v-card-text class="tText__text body-1">
       {{ element.text }}
     </v-card-text>
   </v-card>
@@ -25,6 +25,11 @@ export default {
 </script>
 <style lang="scss">
 .tText {
-  white-space: pre-line;
+  &--empty {
+    display: none!important;
+  }
+  &__text {
+    white-space: pre-line;
+  }
 }
 </style>

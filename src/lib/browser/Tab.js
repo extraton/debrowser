@@ -107,6 +107,16 @@ export default class Tab {
     }
   }
 
+  async send(message, epoch) {
+    try {
+      this.loading = true;
+      await this.debotModule.send({debot_handle: this.debot.debot_handle, message});
+      this.loading = false;
+    } catch (e) {
+      await this.fatal(e, epoch);
+    }
+  }
+
   addSelectKeyElement(Element, epoch) {
     if (this.epoch === epoch) {
       this.elements.push(Element);

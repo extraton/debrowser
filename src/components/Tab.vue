@@ -2,7 +2,9 @@
   <div class="tab">
     <home-tab v-if="isItHome"/>
     <debot-info v-if="null !== tab.debot" :info="tab.debot.info"/>
-    <tag v-for="(element, id) in tab.elements" :key="id" :element="element"/>
+    <div v-for="(element, id) in tab.elements" :key="id">
+      <tag v-if="id === 0 || tab.elements[id-1].isUsed" :element="element"/>
+    </div>
     <tab-loading v-if="isLoading"/>
   </div>
 </template>

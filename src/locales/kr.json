@@ -1,0 +1,157 @@
+{
+  "appBar": {
+    "address": {
+      "placeholder": "주소",
+      "refresh": "새로고침",
+      "home": "홈페이지",
+      "back": "이전",
+      "forward": "다음",
+      "bookmarks": "북마크에 추가",
+      "tip": {
+        "title": "주소 형식 :",
+        "format": "섬기는 사람/]주소",
+        "main": "메인 네트워크 :",
+        "test": "테스트 네트워크:",
+        "local": "로컬 노드 :"
+      }
+    },
+    "tabs": {
+      "home": "홈페이지",
+      "untitled": "제목 없시",
+      "new": "새 탭 열기"
+    }
+  },
+  "settings": {
+    "title": "설정",
+    "theme": {
+      "title": "테마",
+      "light": "빛",
+      "dark": "어두운",
+      "close": "닫기"
+    },
+    "language": {
+      "title": "언어",
+      "items": {
+        "en": "English",
+        "ru": "Русский",
+        "kr": "한국어",
+        "cn": "中文"
+      }
+    }
+  },
+  "keysManagement": {
+    "title": "열쇠 관리법",
+    "name": "이름",
+    "publicKey": "공개 키",
+    "remove": "없애다",
+    "add": "더하다",
+    "close": "닫기"
+  },
+  "copy": {
+    "copy": "모사",
+    "copied": "복사 됨",
+    "error": "오류"
+  },
+  "addKey": {
+    "title": "열쇠 추가",
+    "name": "이름",
+    "seedPhrase": "비밀 문구",
+    "or": "또는",
+    "password": "암호를 만들",
+    "encodeTip": "당신의 비밀 키는 다음의 비밀번호를 사용하여 chacha20 알고리즘으로 암호화되고, 당신의 브라우저 로컬 시스템에 저장될 것입니다.",
+    "back": "이전",
+    "add": "더하다",
+    "seedSize": "12 개 또는 24 단어해야한다.",
+    "unknownError": "알수없는 오류"
+  },
+  "rightCornerMenu": {
+    "menu": "메뉴",
+    "settings": "설정",
+    "keys": "열쇠 관리법",
+    "source": "소스 코드"
+  },
+  "debotInfo": {
+    "name": "이름",
+    "author": "Author",
+    "language": "언어",
+    "publisher": "발행자",
+    "support": "지원하다",
+    "version": "Version",
+    "launch": "달리다",
+    "untitled": "제목 없시",
+    "unknown": "알수없는"
+  },
+  "approveDialog": {
+    "title": "조치 확인",
+    "type": "유형",
+    "dst": "받는 사람 :",
+    "fee": "회비",
+    "outs": "야당",
+    "amount": "양",
+    "dst1": "받는 사람",
+    "unknown": "알 수없는 활동 유형!",
+    "reject": "배척하다",
+    "approve": "허용하다"
+  },
+  "validation": {
+    "required": "필요",
+    "address": "잘못된 주소 형식.",
+    "gte": "{0}보다 크거나 같아야합니다.",
+    "lte": "{0}보다 작거나 같아야합니다.",
+    "scale": "소수점 숫자를 줄여라.",
+    "isInt": "정수여야 한다"
+  },
+  "tag": {
+    "unknown": "알 수없는 요소",
+    "inputAmount": {
+      "amount": "양",
+      "apply": "대다"
+    },
+    "inputNumber": {
+      "number": "숫자",
+      "apply": "적용"
+    },
+    "input": {
+      "value": "값",
+      "apply": "적용"
+    },
+    "fatal": {
+      "error": "오류",
+      "refresh": "재시작",
+      "console": "콘솔에서 세부 사항을보십시오."
+    },
+    "inputAddress": {
+      "address": "주소",
+      "apply": "적용"
+    },
+    "inputConfirm": {
+      "cancel": "취소",
+      "confirm": "확인"
+    },
+    "selectKey": {
+      "title": "deBot에는 키가 필요합니다.",
+      "key": "키",
+      "pass": "암호",
+      "myKeys": "내 열쇠들",
+      "select": "고르다",
+      "unknownError": "알수없는 오류"
+    },
+    "scanQrCode": {
+      "title": "QR 코드",
+      "drop": "이미지를이 영역으로 드래그",
+      "or":  "또는",
+      "upload":  "업로드",
+      "scan":  "QR 코드 스캔",
+      "couldNotRecognize":  "확인할 수 없습니다.",
+      "error":  "오류",
+      "allowCamera":"너의 기기에서 카메라 사용을 허용해",
+      "cancel": "취소"
+    }
+  },
+  "keystore": {
+    "invalidFile": "유효하지 않은 키 저장소 파일입니다.",
+    "corrupted": "키 저장소 파일을 해독할 수 없습니다. 오류가 발생한 것 같습니다.",
+    "invalidPassword": "잘못된 비밀번호.",
+    "unknownVersion": "알 수 없는 열쇠스토어 버젼."
+  }
+}
