@@ -43,6 +43,7 @@
     "title": "密钥管理",
     "name": "名称",
     "publicKey": "公钥",
+    "address": "地址",
     "remove": "删除",
     "add": "新增",
     "close": "密切"

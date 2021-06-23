@@ -18,6 +18,7 @@ export default class Tab {
     this.client = null;
     this.debotModule = null;
     this.signingBox = null;
+    this.key = null;
     this.debot = null;
     this.elements = [];
     this.fetching = false;
@@ -66,6 +67,10 @@ export default class Tab {
 
   setSigningBox(signingBox) {
     this.signingBox = signingBox;
+  }
+
+  setKey(key) {
+    this.key = key;
   }
 
   async resetAddress() {

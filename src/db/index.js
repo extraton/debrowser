@@ -1,13 +1,13 @@
 import Dexie from "dexie";
 
-const DB_NAME = 'db9';
+const DB_NAME = 'db11';
 
 const _ = {
   client: null,
   setSchema: function (db) {
     db.version(1).stores({
       param: '&key, value',
-      key: '++id, name, keys',
+      key: '++id, name, keys, address',
     });
   },
   fillInitial: async function (db) {
@@ -30,6 +30,7 @@ const _ = {
               "ciphertext": "q3tk7AUEOD1D0wMDnUdA7w1GbB2FuGwzMjWoVkBZsCh2+e77m1ZXECeKMZXghg8ZcGxu9se9+lkUDrHnF6oA2g=="
             }
           },
+          address: null
         },
       ]);
     });

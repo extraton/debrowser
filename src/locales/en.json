@@ -43,6 +43,7 @@
     "title": "Keys Management",
     "name": "Name",
     "publicKey": "Public Key",
+    "address": "Address",
     "remove": "Remove",
     "add": "Add",
     "close": "Close"
@@ -54,6 +55,7 @@
   },
   "addKey": {
     "title": "Add Key",
+    "titleEdit": "Edit Key",
     "name": "Name",
     "seedPhrase": "Seed Phrase",
     "or": "or",
@@ -61,8 +63,10 @@
     "encodeTip": "Your secret key will be encoded with chacha20 algorithm with following password and locally stored in your browser.",
     "back": "Back",
     "add": "Add",
+    "save": "Save",
     "seedSize": "Should be 12 or 24 words.",
-    "unknownError": "Unknown error."
+    "unknownError": "Unknown error.",
+    "address": "Address (Optional)"
   },
   "rightCornerMenu": {
     "menu": "Menu",

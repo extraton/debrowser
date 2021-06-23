@@ -11,8 +11,9 @@ import "./items/addressInput.sol";
 import "./items/amountInput.sol";
 import "./items/numberInput.sol";
 import "./items/confirmInput.sol";
+import "./items/userInfo.sol";
 
-contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInputItem, NumberInputItem, ConfirmInputItem {
+contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInputItem, NumberInputItem, ConfirmInputItem, UserInfoItem {
     bytes m_icon;
 
     function setIcon(bytes icon) public {
@@ -29,7 +30,8 @@ contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInp
             MenuItem("Address Input", "Allows to input smart contract address", tvm.functionId(addressInputStart)),
             MenuItem("Amount Input", "Interface for amount input", tvm.functionId(amountInputStart)),
             MenuItem("Number Input", "Interface for number input", tvm.functionId(numberInputStart)),
-            MenuItem("Confirm Input", "Interface for confirm input", tvm.functionId(confirmInputStart))
+            MenuItem("Confirm Input", "Interface for confirm input", tvm.functionId(confirmInputStart)),
+            MenuItem("User Info", "Interface for user info getting", tvm.functionId(userInfoStart))
             ]);
     }
 

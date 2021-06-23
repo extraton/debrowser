@@ -22,7 +22,7 @@ export default function Callbacks(Tab, epoch) {
       const [dstWc, id] = msg.dst.split(':');
       if (DEBOT_WC === dstWc) {
         const Element = await ifc.call(Tab, id, msg, epoch);
-        if (Tab.epoch === epoch) {
+        if (null !== Element && Tab.epoch === epoch) {
           Tab.elements.push(Element);
         }
       } else if (Tab.address.account === msg.dst) {

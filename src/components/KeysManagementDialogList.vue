@@ -9,6 +9,7 @@
           <tr>
             <th v-text="$t('keysManagement.name')"/>
             <th v-text="$t('keysManagement.publicKey')"/>
+            <th v-text="$t('keysManagement.address')"/>
             <th></th>
           </tr>
           </thead>
@@ -18,7 +19,13 @@
             <td>
               <public-key :publicKey="item.keys.public" left/>
             </td>
-            <td class="text-end">
+            <td>
+              <addr v-if="item.address" :address="item.address" left/>
+            </td>
+            <td class="text-end" style="width: 90px">
+              <v-btn @click="$emit('edit', item.id)" small icon>
+                <v-icon>mdi-pencil</v-icon>
+              </v-btn>
               <v-btn @click="remove(item.id)" :disabled="1===item.id" small icon>
                 <v-icon>mdi-delete</v-icon>
               </v-btn>
@@ -44,9 +51,10 @@
 <script>
 import {mapMutations, mapActions, mapState} from "vuex";
 import PublicKey from "@/components/PublicKey";
+import Addr from "@/components/Addr";
 
 export default {
-  components: {PublicKey},
+  components: {Addr, PublicKey},
   props: {},
   data: () => ({}),
   computed: {

@@ -43,6 +43,7 @@
     "title": "열쇠 관리법",
     "name": "이름",
     "publicKey": "공개 키",
+    "address": "주소",
     "remove": "없애다",
     "add": "더하다",
     "close": "닫기"

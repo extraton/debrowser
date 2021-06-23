@@ -39,10 +39,10 @@ contract TerminalItem {
         Terminal.print(tvm.functionId(terminalMenu), "Terminal print message.");
     }
 
-//        function terminalPrintf(uint32 index) public {
-//            index = index;
-//            TvmBuilder b;
-//            b.store();
-//            Terminal.printf(0x01, "Enter number ", b.toCell());
-//        }
+//    function terminalPrintf(uint32 index) public {
+//        index = index;
+//        TvmBuilder b;
+//        b.store(int8(1), uint32(10));
+//        Terminal.printf(tvm.functionId(terminalMenu), "Enter number between {int8} and {uint32}", b.toCell());
+//    }
 }

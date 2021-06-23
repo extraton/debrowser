@@ -19,7 +19,7 @@ export default {
     bots: [
       {
         name: 'Interfaces Demo',
-        address: {account: '0:9452c0f389d6892b4f10d6979f5517c5bee7bf4b0e4b764e7a468bd96abff64a', server: 'net.ton.dev'},
+        address: {account: '0:2bfc523d95e4b6b058f9ea65c609d9f7d38aa5900b68791c8929ac167ed7c406', server: 'net.ton.dev'},
         color: '#ff7163',
         icon: 'mdi-eye',
       },

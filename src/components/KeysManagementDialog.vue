@@ -1,20 +1,21 @@
 <template>
-  <v-dialog content-class="keysManageDialog" v-model="isOpen" max-width="500" :persistent="page==='add'">
-    <keys-management-dialog-list v-if="page==='main'" @add="page='add'"/>
-    <keys-management-dialog-add v-else-if="page==='add'" @back="page='main'"/>
+  <v-dialog content-class="keysManageDialog" v-model="isOpen" max-width="700" :persistent="page==='add'">
+    <keys-management-dialog-list v-if="page==='main'" @add="toAdd" @edit="toEdit"/>
+    <keys-management-dialog-form v-else-if="page==='add'" :edit-id="editId" @back="page='main'"/>
   </v-dialog>
 </template>
 
 <script>
 import {mapMutations, mapState} from "vuex";
 import KeysManagementDialogList from "@/components/KeysManagementDialogList";
-import KeysManagementDialogAdd from "@/components/KeysManagementDialogAdd";
+import KeysManagementDialogForm from "@/components/KeysManagementDialogForm";
 
 export default {
-  components: {KeysManagementDialogAdd, KeysManagementDialogList},
+  components: {KeysManagementDialogForm, KeysManagementDialogList},
   props: {},
   data: () => ({
-    page: 'main'
+    page: 'main',
+    editId: null,
   }),
   computed: {
     ...mapState('keys', [
@@ -36,6 +37,14 @@ export default {
           'changeOpen'
         ]
     ),
+    toAdd() {
+      this.editId = null;
+      this.page='add';
+    },
+    toEdit(id) {
+      this.editId = id;
+      this.page='add';
+    },
   }
 }
 </script>

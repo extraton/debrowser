@@ -72,8 +72,8 @@ export default {
       this.error = null;
       await this.$refs.form.validate();
       if (this.valid) {
-        let keystore;
-        for (const key of this.keys) {
+        let keystore, key;
+        for (key of this.keys) {
           if (key.id === this.keyId) {
             keystore = key.keys;
             break;
@@ -86,6 +86,7 @@ export default {
           this.element.setUsed();
           this.pass = null;
           this.element.tab.setSigningBox({signing_box: SigningBoxHandle});
+          this.element.tab.setKey(key);
           this.element.resolve(this.element.tab.signingBox);
         } catch (e) {
           this.error = utils.handleException(e, this.$t('tag.selectKey.unknownError'));
