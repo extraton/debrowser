@@ -23,7 +23,7 @@ contract NetworkItem {
         index = index;
         string[] headers;
         headers.push("Content-Type: application/x-www-form-urlencoded");
-        Network.get(tvm.functionId(networkGetPrint), "http://ptsv2.com/t/qajss-1618330246/post", headers);
+        Network.get(tvm.functionId(networkGetPrint), "https://ptsv2.com/t/qajss-1618330246/post", headers);
     }
 
     function networkGetPrint(int32 statusCode, string[] retHeaders, string content) public {
@@ -39,7 +39,7 @@ contract NetworkItem {
         string[] headers;
         headers.push("Content-Type: application/x-www-form-urlencoded");
         string body = "key1=value1";
-        Network.post(tvm.functionId(networkPostPrint), "http://ptsv2.com/t/qajss-1618330246/post", headers, body);
+        Network.post(tvm.functionId(networkPostPrint), "https://ptsv2.com/t/qajss-1618330246/post", headers, body);
     }
 
     function networkPostPrint(int32 statusCode, string[] retHeaders, string content) public {
