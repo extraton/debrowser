@@ -7,6 +7,6 @@ git clone https://github.com/extraton/debrowser.git .
 git checkout "${1}"
 yarn install
 yarn run build
-docker build -f ../deploy/Dockerfile -t extraton-debrowser:"${1}" .
+docker build -f ../deploy/Dockerfile -t extraton/extraton-debrowser:"${1}" -t docker.pkg.github.com/extraton/debrowser/debrowser-nginx:${1} .
 cd ../
 rm -rf build

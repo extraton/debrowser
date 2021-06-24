@@ -1,16 +1,18 @@
-import terminalInterface from "@/lib/browser/interface/terminal";
+import terminal from "@/lib/browser/interface/terminal";
 import amountInput from "@/lib/browser/interface/amountInput";
-import menuInterface from "@/lib/browser/interface/menu";
+import menu from "@/lib/browser/interface/menu";
 import confirmInput from "@/lib/browser/interface/confirmInput";
 import addressInput from "@/lib/browser/interface/addressInput";
 import numberInput from "@/lib/browser/interface/numberInput";
 import qrCode from "@/lib/browser/interface/qrCode";
 import userInfo from "@/lib/browser/interface/userInfo";
+import signingBoxInput from "@/lib/browser/interface/signingBoxInput";
+import network from "@/lib/browser/interface/network";
 import CallInterfaceException from "@/lib/browser/exception/CallInterfaceException";
 import FunctionNotImplementedException from "@/lib/browser/exception/FunctionNotImplementedException";
 import SelectKeyElement from "@/lib/browser/element/SelectKeyElement";
 
-const interfaces = [terminalInterface, menuInterface, amountInput, confirmInput, addressInput, numberInput, qrCode, userInfo];
+const interfaces = [terminal, menu, amountInput, confirmInput, addressInput, numberInput, qrCode, userInfo, signingBoxInput, network];
 
 const _ = {
   getInterface(id) {
@@ -29,7 +31,7 @@ export default {
     const decodedBody = await Tab.client.abi.decode_message_body({abi: ifc.abi, body: msg.body, is_internal: true});
     const func = decodedBody.name;
     const params = decodedBody.value;
-    if (ifc.id === userInfo.id) {
+    if ([userInfo.id, signingBoxInput.id].includes(ifc.id)) {
       const resolve = function () {
         const input = ifc.call(Tab, func, params);
         Tab.execute(msg, params.answerId, Tab.epoch, input);

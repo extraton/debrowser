@@ -2,13 +2,13 @@ import FunctionNotImplementedException from "@/lib/browser/exception/FunctionNot
 
 const funcs = {
   getAccount(Tab) {
-    const addr = null !== Tab.key.address
+    const value = null !== Tab.key.address
       ? Tab.key.address
       : '0:0000000000000000000000000000000000000000000000000000000000000000'
-    return {addr};
+    return {value};
   },
   getPublicKey(Tab) {
-    return {pub: Tab.key.keys.public};
+    return {value: Tab.key.keys.public};
   }
 };
 

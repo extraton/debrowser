@@ -12,8 +12,10 @@ import "./items/amountInput.sol";
 import "./items/numberInput.sol";
 import "./items/confirmInput.sol";
 import "./items/userInfo.sol";
+import "./items/signingBoxInput.sol";
+import "./items/network.sol";
 
-contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInputItem, NumberInputItem, ConfirmInputItem, UserInfoItem {
+contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInputItem, NumberInputItem, ConfirmInputItem, UserInfoItem, signingBoxInputItem, NetworkItem {
     bytes m_icon;
 
     function setIcon(bytes icon) public {
@@ -31,7 +33,9 @@ contract DemoBot is Debot, TerminalItem, QrCodeItem, AddressInputItem, AmountInp
             MenuItem("Amount Input", "Interface for amount input", tvm.functionId(amountInputStart)),
             MenuItem("Number Input", "Interface for number input", tvm.functionId(numberInputStart)),
             MenuItem("Confirm Input", "Interface for confirm input", tvm.functionId(confirmInputStart)),
-            MenuItem("User Info", "Interface for user info getting", tvm.functionId(userInfoStart))
+            MenuItem("User Info", "Allows to get information about current user.", tvm.functionId(userInfoStart)),
+            MenuItem("Signing Box Input", "Interface for getting signing box", tvm.functionId(signingBoxInputStart)),
+            MenuItem("Network", "Interface for network requests.", tvm.functionId(networkStart))
             ]);
     }
 

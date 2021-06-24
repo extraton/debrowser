@@ -8,7 +8,6 @@ const keyRepository = {
     return key;
   },
   async update(key) {
-    console.log(key);
     const db = await database.getClient();
     await db.key.update(key, {name: key.name, address: key.address});
   },

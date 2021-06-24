@@ -16,10 +16,7 @@ function genaddr {
 tonos-cli genaddr $1.tvc $1.abi.json --genkey $1.keys.json > log.log
 }
 
-LOCALNET=http://127.0.0.1
-DEVNET=https://net.ton.dev
-MAINNET=https://main.ton.dev
-NETWORK=$LOCALNET
+NETWORK=http://127.0.0.1
 
 echo COMPILE
 compile $DEBOT_NAME

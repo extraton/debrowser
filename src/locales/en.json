@@ -150,6 +150,9 @@
       "error":  "Error",
       "allowCamera":"Allow camera in your device",
       "cancel": "Cancel"
+    },
+    "network": {
+      "error": "Request error"
     }
   },
   "keystore": {

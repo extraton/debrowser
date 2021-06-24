@@ -23,8 +23,8 @@ contract UserInfoItem {
         UserInfo.getAccount(tvm.functionId(userInfoPrintAccount));
     }
 
-    function userInfoPrintAccount(address addr) public {
-        Terminal.print(tvm.functionId(userInfoMenu), format("Your address:\n{}", addr));
+    function userInfoPrintAccount(address value) public {
+        Terminal.print(tvm.functionId(userInfoMenu), format("Your address:\n{}", value));
     }
 
     function userInfoGetPublicKey(uint32 index) public {
@@ -32,7 +32,7 @@ contract UserInfoItem {
         UserInfo.getPublicKey(tvm.functionId(userInfoPrintPublicKey));
     }
 
-    function userInfoPrintPublicKey(address pub) public {
-        Terminal.print(tvm.functionId(userInfoMenu), format("Your public key:\n{}", pub));
+    function userInfoPrintPublicKey(address value) public {
+        Terminal.print(tvm.functionId(userInfoMenu), format("Your public key:\n{}", value));
     }
 }
