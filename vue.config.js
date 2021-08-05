@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
       new CopyPlugin({
         patterns: [
-          {from: './node_modules/@tonclient/lib-web/tonclient.wasm', to: 'tonclient_1.20.0.wasm'},
+          {from: './node_modules/@tonclient/lib-web/tonclient.wasm', to: 'tonclient_1.20.1.wasm'},
         ],
       }),
     ],
