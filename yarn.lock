@@ -974,15 +974,15 @@
   resolved "https://registry.npm.taobao.org/@soda/get-current-script/download/@soda/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha1-pTUV2yXYA4N0OBtzryC7Ty5QjYc=
 
-"@tonclient/core@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@tonclient/core/-/core-1.13.0.tgz#dc1712472e937fa835d79b134d76729a829502e9"
-  integrity sha512-JdDiacrYaXBeiIwz9jObrcrfELed3oz95dQjiC/7kL/VOXWTqsuu1d78zsuH2QraANbzfhLPsboLfecXcNbVJQ==
+"@tonclient/core@^1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@tonclient/core/-/core-1.20.0.tgz#cd9d684dac606437c3b524c13899150dfe04b0c3"
+  integrity sha512-k3EMn5A1phmlEO+8+KGnVri4ta+x9/40c7F9MBaPLUCBR3YB2PGEsnOaEfGbS/ktbcLaqB/ibFFWy/AgFnCQxQ==
 
-"@tonclient/lib-web@^1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@tonclient/lib-web/-/lib-web-1.13.0.tgz#8c4e6880c7b8bb45e1e707d9fb4b4ef2b0235fb7"
-  integrity sha512-S2OxtqpOS/Fdx+a24wq7vM5w/5mPJmBMHL0wOr/JWz7KDSUySVClmtvCX4G+AV98t01ASganyTJGgAghvF4RWA==
+"@tonclient/lib-web@^1.20.0":
+  version "1.20.0"
+  resolved "https://registry.yarnpkg.com/@tonclient/lib-web/-/lib-web-1.20.0.tgz#4922a76d3b9d69ed78518450f20921a5e566d4b1"
+  integrity sha512-dE8KMLvjg6GbfTR6turOAwI23iW5DaOVxXeWJRytI+yEN3HfigFl9lbVYapw7Mhx3jdsLYD7cRgjCd+rC6U0ug==
 
 "@types/anymatch@*":
   version "1.3.1"

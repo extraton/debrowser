@@ -29,7 +29,7 @@ export default {
     async setAddress({state}, {account, server = tonApi.serverDefault}) {
       await state.tabs[state.currentTabIndex].setAddress(server, account);
     },
-    start: ({state}) => state.tabs[state.currentTabIndex].start(),
+    start: ({state}, message = null) => state.tabs[state.currentTabIndex].start(message),
     goHome: ({state}) => state.tabs[state.currentTabIndex].resetAddress(),
     refresh: ({state}) => state.tabs[state.currentTabIndex].refresh(),
     onAddressInput: async ({state}, addressStr) => {

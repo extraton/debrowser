@@ -1,6 +1,7 @@
 <template>
   <div class="tag" ref="tab">
-    <t-text v-if="element instanceof list.TextElement" :element="element"/>
+    <t-debot-info v-if="element instanceof list.DebotInfoElement" :element="element"/>
+    <t-text v-else-if="element instanceof list.TextElement" :element="element"/>
     <t-menu v-else-if="element instanceof list.MenuElement" :element="element"/>
     <t-input v-else-if="element instanceof list.InputElement" :element="element"/>
     <t-input-amount v-else-if="element instanceof list.InputAmountElement" :element="element"/>
@@ -16,6 +17,7 @@
 </template>
 
 <script>
+import tDebotInfo from "@/components/tag/DebotInfo";
 import tText from "@/components/tag/Text";
 import tMenu from "@/components/tag/Menu";
 import tInput from "@/components/tag/Input";
@@ -27,6 +29,7 @@ import tInputNumber from "@/components/tag/InputNumber";
 import tSelectKey from "@/components/tag/SelectKey";
 import tScanQrCode from "@/components/tag/ScanQrCode";
 import tNetwork from "@/components/tag/Network";
+import DebotInfoElement from "@/lib/browser/element/DebotInfoElement";
 import TextElement from "@/lib/browser/element/TextElement";
 import MenuElement from "@/lib/browser/element/MenuElement";
 import InputElement from "@/lib/browser/element/InputElement";
@@ -41,6 +44,7 @@ import NetworkElement from "@/lib/browser/element/NetworkElement";
 
 export default {
   components: {
+    tDebotInfo,
     tText,
     tMenu,
     tInput,
@@ -56,6 +60,7 @@ export default {
   props: {element: Object},
   data: () => ({
     list: {
+      DebotInfoElement,
       TextElement,
       MenuElement,
       InputElement,
