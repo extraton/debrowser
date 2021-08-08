@@ -5,7 +5,7 @@
       <v-list-item-group v-model="selectedItem" color="primary">
         <v-list-item v-for="(choice, i) in element.choices" :key="i" @click="select(choice, i)" link>
           <v-list-item-content>
-            <v-list-item-title v-text="choice.title"/>
+            <v-list-item-title class="tMenu__item__title" v-text="choice.title"/>
             <v-list-item-subtitle v-text="choice.description"/>
           </v-list-item-content>
         </v-list-item>
@@ -43,6 +43,11 @@ export default {
 .tMenu {
   &__title {
     white-space: pre-line;
+  }
+  &__item {
+    &__title {
+      white-space: pre-line;
+    }
   }
 }
 </style>

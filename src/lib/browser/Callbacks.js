@@ -22,14 +22,14 @@ export default function Callbacks(Tab, epoch) {
       store.dispatch('approve/init', {activity: params.activity, resolve});
     });
   }
-  this.log = function (ParamsOfAppDebotBrowserLog) {
-    console.log(ParamsOfAppDebotBrowserLog)
+  this.log = function (/*ParamsOfAppDebotBrowserLog*/) {
+    // console.log(ParamsOfAppDebotBrowserLog)
   }
-  this.switch = function (ParamsOfAppDebotBrowserSwitch) {
-    console.log(ParamsOfAppDebotBrowserSwitch)
+  this.switch = function (/*ParamsOfAppDebotBrowserSwitch*/) {
+    // console.log(ParamsOfAppDebotBrowserSwitch)
   }
   this.switch_completed = function () {
-    console.log('switch_completed');
+    // console.log('switch_completed');
   }
   this.show_action = function () {
     Tab.fatal(new DebotUseActionsException(), epoch);

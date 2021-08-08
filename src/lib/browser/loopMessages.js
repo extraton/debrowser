@@ -22,7 +22,7 @@ export default async function loopMessages(Tab, epoch) {
           Tab.loading = true;
           const debotAddress = msg.dst;
           if (Tab.currentDebotAddress !== debotAddress) {
-            Tab.messages.unshift(message)
+            Tab.messages.unshift(message);
             Tab.isMessagesLooping = false;
             Tab.switchDebot(debotAddress, epoch);
             return;

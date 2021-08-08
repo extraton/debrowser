@@ -84,16 +84,16 @@ export default class Tab {
 
   async start() {
     this.loading = true;
-    const debot = this.debots[this.currentDebotAddress];
-    try {
-      await this.engine.start({debot_handle: debot.debot.debot_handle});
-      this.loading = false;
-    } catch (e) {
-      await this.fatal(e);
-      return;
-    }
-    const newMessages = debot.callbacks.messages.splice(0, debot.callbacks.messages.length);
     if (!this.launched) {
+      const debot = this.debots[this.currentDebotAddress];
+      try {
+        await this.engine.start({debot_handle: debot.debot.debot_handle});
+        this.loading = false;
+      } catch (e) {
+        await this.fatal(e);
+        return;
+      }
+      const newMessages = debot.callbacks.messages.splice(0, debot.callbacks.messages.length);
       this.launched = true;
       this.messages.push(...newMessages);
     }
@@ -148,7 +148,7 @@ export default class Tab {
         abi: {type: 'Json', value: debot.debot.debot_abi},
         address: debotAddress,
         // src_address: inputMsg.dst,
-        call_set: {function_name, input},
+        call_set: '0' !== function_name ? {function_name, input} : undefined,
         value: '1000000000000000'
       }));
       await this.engine.send({debot_handle: debot.debot.debot_handle, message: message.message});
