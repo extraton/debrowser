@@ -5896,6 +5896,11 @@ node-ipc@^9.1.1:
     js-message "1.0.7"
     js-queue "2.0.2"
 
+node-json-minify@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/node-json-minify/-/node-json-minify-1.0.0.tgz#7bb3432f9658b6beb1d993fd5d53b3ca29d0d79c"
+  integrity sha1-e7NDL5ZYtr6x2ZP9XVOzyinQ15w=
+
 node-libs-browser@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.2.1.tgz#b64f513d18338625f90346d27b0d235e631f6425"
