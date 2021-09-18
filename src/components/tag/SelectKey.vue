@@ -7,6 +7,7 @@
                   :label="$t('tag.selectKey.key')"/>
         <v-text-field v-model="pass" :rules="[required]" :disabled="element.isUsed" type="password"
                       :label="$t('tag.selectKey.pass')"/>
+        <v-checkbox v-model="save" label="Save for this session"/>
         <div class="error--text">{{ error }}</div>
       </v-card-text>
       <v-card-actions>
@@ -34,6 +35,7 @@ export default {
   data: () => ({
     valid: true,
     pass: null,
+    save: true,
     error: null,
   }),
   computed: {
@@ -85,9 +87,12 @@ export default {
           const SigningBoxHandle = (await this.element.tab.client.crypto.register_signing_box(SigningBox)).handle;
           this.element.setUsed();
           this.pass = null;
-          this.element.tab.setSigningBox({signing_box: SigningBoxHandle});
+          const sg = {signing_box: SigningBoxHandle};
+          if (this.save) {
+            this.element.tab.setSigningBox(sg);
+          }
           this.element.tab.setKey(key);
-          this.element.resolve(this.element.tab.signingBox);
+          this.element.resolve(sg);
         } catch (e) {
           this.error = utils.handleException(e, this.$t('tag.selectKey.unknownError'));
         }

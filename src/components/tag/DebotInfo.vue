@@ -7,7 +7,7 @@
     </v-card-title>
     <v-card-subtitle>by {{ element.info.author || $t('debotInfo.unknown') }}</v-card-subtitle>
     <div v-if="icon" class="text-center">
-      <img :src="`data:image/png;base64,${icon}`" :alt="element.info.name"/>
+      <img :src="`${icon}`" :alt="element.info.name"/>
     </div>
     <v-simple-table>
       <template v-slot:default>
@@ -39,7 +39,17 @@ export default {
   data: () => ({items: []}),
   computed: {
     icon() {
-      return null !== this.element.info.icon && '' !== this.element.info.icon ? Enc.bufToBase64(Enc.hexToBuf(this.element.info.icon)) : null;
+      let icon = null;
+      const isIconNull = null === this.element.info.icon;
+      const isIconEmpty = '' === this.element.info.icon;
+      if (!isIconNull && !isIconEmpty) {
+        try {
+          icon = Enc.hexToStr(this.element.info.icon)
+        } catch (e) {
+          console.error('Cannot decode icon');
+        }
+      }
+      return icon;
     }
   },
   created() {
@@ -52,7 +62,8 @@ export default {
       // {name: this.$t('debotInfo.version'), key: 'version'},
     ];
   },
-  async mounted() {},
+  async mounted() {
+  },
   methods: {
     ...mapActions('browser', [
       'start',

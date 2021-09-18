@@ -12,6 +12,7 @@
     <t-select-key v-else-if="element instanceof list.SelectKeyElement" :element="element"/>
     <t-scan-qr-code v-else-if="element instanceof list.ScanQrCodeElement" :element="element"/>
     <t-network v-else-if="element instanceof list.NetworkElement" :element="element"/>
+    <t-media v-else-if="element instanceof list.MediaElement" :element="element"/>
     <div v-else v-text="$t('tag.unknown')"/>
   </div>
 </template>
@@ -29,6 +30,7 @@ import tInputNumber from "@/components/tag/InputNumber";
 import tSelectKey from "@/components/tag/SelectKey";
 import tScanQrCode from "@/components/tag/ScanQrCode";
 import tNetwork from "@/components/tag/Network";
+import tMedia from "@/components/tag/Media";
 import DebotInfoElement from "@/lib/browser/element/DebotInfoElement";
 import TextElement from "@/lib/browser/element/TextElement";
 import MenuElement from "@/lib/browser/element/MenuElement";
@@ -41,6 +43,7 @@ import InputNumberElement from "@/lib/browser/element/InputNumberElement";
 import SelectKeyElement from "@/lib/browser/element/SelectKeyElement";
 import ScanQrCodeElement from "@/lib/browser/element/ScanQrCodeElement";
 import NetworkElement from "@/lib/browser/element/NetworkElement";
+import MediaElement from "@/lib/browser/element/MediaElement";
 
 export default {
   components: {
@@ -55,7 +58,8 @@ export default {
     tInputNumber,
     tSelectKey,
     tScanQrCode,
-    tNetwork
+    tNetwork,
+    tMedia
   },
   props: {element: Object},
   data: () => ({
@@ -71,7 +75,8 @@ export default {
       InputNumberElement,
       SelectKeyElement,
       ScanQrCodeElement,
-      NetworkElement
+      NetworkElement,
+      MediaElement
     },
   }),
   computed: {},

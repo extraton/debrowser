@@ -8,11 +8,12 @@ import qrCode from "@/lib/browser/interface/qrCode";
 import userInfo from "@/lib/browser/interface/userInfo";
 import signingBoxInput from "@/lib/browser/interface/signingBoxInput";
 import network from "@/lib/browser/interface/network";
+import media from "@/lib/browser/interface/media";
 import CallInterfaceException from "@/lib/browser/exception/CallInterfaceException";
 import FunctionNotImplementedException from "@/lib/browser/exception/FunctionNotImplementedException";
 import SelectKeyElement from "@/lib/browser/element/SelectKeyElement";
 
-const interfaces = [terminal, menu, amountInput, confirmInput, addressInput, numberInput, qrCode, userInfo, signingBoxInput, network];
+const interfaces = [terminal, menu, amountInput, confirmInput, addressInput, numberInput, qrCode, userInfo, signingBoxInput, network, media];
 
 const _ = {
   getInterface(id) {
